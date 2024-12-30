@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/tmux/.tmux.conf: ./tmux/tmux.conf
+    ~/.config/nvim: ./nvim
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing tmux plugin manager]
