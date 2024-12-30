@@ -8,6 +8,7 @@
 - link:
     ~/.config/tmux/tmux.conf: ./tmux/tmux.conf
     ~/.config/nvim: ./nvim
+    ~/.config/ghostty: ./ghostty
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

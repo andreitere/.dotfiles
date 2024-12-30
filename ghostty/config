@@ -1,0 +1,7 @@
+theme=rose-pine-moon
+shell-integration-features=cursor
+font-size=15
+custom-shader-animation=true
+clipboard-write=allow
+selection-invert-fg-bg=true
+cursor-style=bar
