@@ -1,6 +1,11 @@
 theme=rose-pine-moon
-font-size=15
+font-size=14
 custom-shader-animation=true
 clipboard-write=allow
 selection-invert-fg-bg=true
-cursor-style=bar
+cursor-color=#FBFBFB
+cursor-opacity=0.8
+cursor-style=underline
+cursor-style-blink=true
+font-family=CaskaydiaCove Nerd Font Mono
+title=🔥tere🔥
