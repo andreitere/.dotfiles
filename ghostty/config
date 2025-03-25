@@ -9,3 +9,4 @@ cursor-style=bar
 cursor-style-blink=true
 window-step-resize=true
 window-padding-y=0
+font-family="MesloLGS NF"
