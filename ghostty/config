@@ -1,4 +1,4 @@
-theme=tokyonight_moon
+theme=github-dark-default
 font-size=14
 custom-shader-animation=true
 clipboard-write=allow
@@ -9,4 +9,5 @@ cursor-style=bar
 cursor-style-blink=true
 window-step-resize=true
 window-padding-y=0
+window-padding-x=0
 font-family="MesloLGS NF"
