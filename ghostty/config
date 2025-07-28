@@ -1,4 +1,4 @@
-theme=github-dark-default
+theme="catppuccin-mocha"
 font-size=14
 custom-shader-animation=true
 clipboard-write=allow
@@ -10,4 +10,5 @@ cursor-style-blink=true
 window-step-resize=true
 window-padding-y=0
 window-padding-x=0
-font-family="MesloLGS NF"
+#font-family="MesloLGS NF"
+font-family="JetBrainsMonoNL Nerd Font"

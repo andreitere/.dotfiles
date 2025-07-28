@@ -11,6 +11,7 @@
     ~/.config/nvim: ./nvim
     ~/.config/ghostty: ./ghostty
     ~/.config/atuin: ./atuin
+    ~/.config/lazygit: ./lazygit
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
