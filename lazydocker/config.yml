@@ -1,0 +1,6 @@
+customCommands:
+  containers:
+    - name: kill
+      attach: false
+      command: 'docker kill {{ .Container.ID }}'
+      serviceNames: []

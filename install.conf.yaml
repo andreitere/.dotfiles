@@ -12,6 +12,7 @@
     ~/.config/ghostty: ./ghostty
     ~/.config/atuin: ./atuin
     ~/.config/lazygit: ./lazygit
+    ~/.config/lazydocker: ./lazydocker
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
