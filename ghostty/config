@@ -1,6 +1,4 @@
-theme="Citruszest"
-#theme="Cobalt Next Dark"
-#theme="Banana Blueberry"
+theme=Gruvbox Dark Hard
 font-size=14
 custom-shader-animation=true
 clipboard-write=allow
@@ -12,4 +10,4 @@ cursor-style-blink=true
 window-step-resize=true
 window-padding-y=0
 window-padding-x=0
-font-family="Cascadia Mono"
+font-family="Paper Mono"
