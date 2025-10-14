@@ -8,6 +8,16 @@ customCommands:
         title: "Commit message:"
         key: "commit_msg"
         initialValue: "wip"
+
+  - key: "<c-d>"
+    context: "files"
+    description: "Generate git patch from changes"
+    prompts:
+      - type: "input"
+        title: "Enter file path for patch to be saved (relative to repo root)"
+        key: "file"
+    command: >
+      bash -c 'git diff HEAD --cached > "{{.Form.file}}.patch" && echo "✅ Patch saved as {{.Form.file}}.patch"'
 gui:
   nerdFontsVersion: "3"
   theme:
@@ -35,4 +45,3 @@ gui:
     "*": "#b4befe"
   # theme:
   # border: 'double'
-
