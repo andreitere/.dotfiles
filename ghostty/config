@@ -8,6 +8,12 @@ cursor-opacity=0.8
 cursor-style=bar
 cursor-style-blink=true
 window-step-resize=true
-window-padding-y=0
-window-padding-x=0
+window-padding-y=5
+window-padding-x=5
 font-family="Paper Mono"
+window-decoration=server
+
+
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+
