@@ -13,7 +13,12 @@
     ~/.config/atuin: ./atuin
     ~/.config/lazygit: ./lazygit
     ~/.config/lazydocker: ./lazydocker
+    ~/.config/hyprpanel: ./hyprpanel
+    ~/.config/chrome-flags.conf: ./root_singles/chrome-flags.conf
+    ~/.config/code-flags.conf: ./root_singles/code-flags.conf
+    ~/.config/hypr: ./hypr
+    ~/.config/rofi: ./rofi
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing tmux plugin manager]
+  - [git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm, Installing tmux plugin manager]
