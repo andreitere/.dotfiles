@@ -1,0 +1,295 @@
+# ============================================================================
+# 🚀 ASHELL CONFIG - Modern Cyberpunk Theme
+# ============================================================================
+# A sleek, feature-rich configuration for Ashell status bar
+# Optimized for Hyprland with a cyberpunk aesthetic
+# ============================================================================
+
+# Logging level: "trace", "debug", "info", "warn", "error"
+log_level = "warn"
+
+# Monitor outputs configuration
+# Use specific monitor names or "All" for all monitors
+outputs = { Targets = ["All"] }
+
+# Bar position: "Top" or "Bottom"
+position = "Top"
+
+# App launcher command (change to your preferred launcher)
+# Options: rofi, wofi, walker, fuzzel, etc.
+app_launcher_cmd = "rofi -show drun"
+
+# ============================================================================
+# 📦 MODULE LAYOUT
+# ============================================================================
+# Organize your status bar modules in three sections: left, center, right
+# Modules in [ ] are grouped together visually
+
+[modules]
+left = [
+    "AppLauncher",
+    "Clipboard", 
+    "Updates",
+    "Workspaces"
+]
+
+center = [
+    "WindowTitle"
+]
+
+right = [
+    "MediaPlayer",
+    "SystemInfo",
+    "KeyboardLayout",
+    [
+        "Tray",
+        "Clock",
+        "Privacy",
+        "Settings"
+    ]
+]
+
+# ============================================================================
+# 🔄 UPDATES MODULE
+# ============================================================================
+# Shows available system updates
+
+[updates]
+# Command to check for updates (adjust for your distro)
+# Arch/Manjaro:
+check_cmd = "checkupdates"
+# For AUR helper (paru):
+# check_cmd = "checkupdates; paru -Qua"
+
+# Command to run when clicking update button
+update_cmd = 'kitty -e bash -c "sudo pacman -Syu; echo Done - Press enter to exit; read" &'
+
+# ============================================================================
+# 💼 WORKSPACES MODULE
+# ============================================================================
+
+[workspaces]
+# Automatically fill empty workspace numbers
+enable_workspace_filling = true
+
+# ============================================================================
+# 🪟 WINDOW TITLE MODULE
+# ============================================================================
+
+[window_title]
+# Truncate long window titles
+truncate_title_after_length = 80
+
+# ============================================================================
+# 📋 CLIPBOARD MODULE
+# ============================================================================
+
+[clipboard]
+# Command to launch clipboard manager
+# Options: cliphist, copyq, etc.
+command = "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+
+# ============================================================================
+# 💻 SYSTEM INFO MODULE
+# ============================================================================
+
+[system_info]
+# Show CPU usage
+show_cpu = true
+# Show RAM usage
+show_memory = true
+# Show temperature (requires sensors)
+show_temperature = true
+
+# ============================================================================
+# 🎵 MEDIA PLAYER MODULE
+# ============================================================================
+
+[media_player]
+# Show media player controls
+show_controls = true
+# Truncate long track names
+truncate_title_after_length = 50
+
+# ============================================================================
+# ⏰ CLOCK MODULE
+# ============================================================================
+
+[clock]
+# Combined date and time format (strftime format)
+# Examples:
+# "%a %d %b %R" -> Tue 28 Jan 14:30 (default)
+# "%H:%M" -> 14:30
+# "%I:%M %p" -> 02:30 PM
+# "%A, %B %d %H:%M" -> Monday, January 28 14:30
+# "%d/%m/%Y %H:%M" -> 28/01/2026 14:30
+format = "%a %d %b %H:%M"
+
+# ============================================================================
+# ⚙️  SETTINGS MODULE
+# ============================================================================
+
+[settings]
+# Lock screen command
+lock_cmd = "hyprlock"
+
+# Audio settings
+audio_sinks_more_cmd = "pavucontrol -t 3"
+audio_sources_more_cmd = "pavucontrol -t 4"
+
+# Network settings
+wifi_more_cmd = "nm-connection-editor"
+vpn_more_cmd = "nm-connection-editor"
+
+# Bluetooth settings
+bluetooth_more_cmd = "blueman-manager"
+
+# ============================================================================
+# 🎨 APPEARANCE - CYBERPUNK THEME
+# ============================================================================
+
+[appearance]
+# Style options: "Islands", "Solid", "Gradient"
+style = "Solid"
+
+# Font configuration (requires restart to apply)
+font_name = "CaskaydiaMono Nerd Font"
+
+# Font size (smaller number = smaller text)
+font_size = 13
+
+# Scaling factor (1.0 = normal size)
+scale_factor = 1.1
+
+# ============================================================================
+# COLOR SCHEME - Tokyo Night
+# ============================================================================
+
+# Primary accent color (tokyo blue)
+primary_color = "#7aa2f7"
+
+# Success/positive actions (green)
+success_color = "#9ece6a"
+
+# Main text color
+text_color = "#a9b1d6"
+
+# Workspace colors (blue to purple gradient)
+workspace_colors = ["#7aa2f7", "#bb9af7"]
+
+# Special workspace colors
+special_workspace_colors = ["#bb9af7", "#7aa2f7"]
+
+# ============================================================================
+# DANGER/WARNING COLORS
+# ============================================================================
+
+[appearance.danger_color]
+# Critical/error state (red)
+base = "#f7768e"
+# Warning state (yellow)
+weak = "#e0af68"
+
+# ============================================================================
+# BACKGROUND COLORS
+# ============================================================================
+
+[appearance.background_color]
+# Main background (dark)
+base = "#1a1b26"
+# Lighter background (for contrast)
+weak = "#24283b"
+# Stronger/darker background
+strong = "#414868"
+
+# ============================================================================
+# SECONDARY COLORS
+# ============================================================================
+
+[appearance.secondary_color]
+# Secondary UI elements
+base = "#565f89"
+
+# ============================================================================
+# 🎯 CUSTOM MODULES (OPTIONAL)
+# ============================================================================
+# Uncomment and customize these to add your own functionality
+
+# Example: Custom app launcher button
+# [[CustomModule]]
+# name = "customLauncher"
+# icon = "󱗼"
+# command = "rofi -show drun"
+
+# Example: Quick screenshot
+# [[CustomModule]]
+# name = "screenshot"
+# icon = "󰹑"
+# command = "grimblast --notify copysave area"
+
+# Example: Power menu
+# [[CustomModule]]
+# name = "power"
+# icon = "⏻"
+# command = "rofi -show power-menu"
+
+# Example: File manager
+# [[CustomModule]]
+# name = "files"
+# icon = "󰉋"
+# command = "thunar"
+
+# ============================================================================
+# 📝 ALTERNATIVE COLOR SCHEMES
+# ============================================================================
+# Comment out the cyberpunk theme above and uncomment one of these:
+
+# ---- TOKYO NIGHT ----
+# primary_color = "#7aa2f7"
+# success_color = "#9ece6a"
+# text_color = "#a9b1d6"
+# workspace_colors = ["#7aa2f7", "#bb9af7"]
+# [appearance.danger_color]
+# base = "#f7768e"
+# weak = "#e0af68"
+# [appearance.background_color]
+# base = "#1a1b26"
+# weak = "#24283b"
+# strong = "#414868"
+
+# ---- CATPPUCCIN MOCHA ----
+# primary_color = "#89b4fa"
+# success_color = "#a6e3a1"
+# text_color = "#cdd6f4"
+# workspace_colors = ["#89b4fa", "#cba6f7"]
+# [appearance.danger_color]
+# base = "#f38ba8"
+# weak = "#fab387"
+# [appearance.background_color]
+# base = "#1e1e2e"
+# weak = "#313244"
+# strong = "#11111b"
+
+# ---- NORD ----
+# primary_color = "#88c0d0"
+# success_color = "#a3be8c"
+# text_color = "#eceff4"
+# workspace_colors = ["#88c0d0", "#81a1c1"]
+# [appearance.danger_color]
+# base = "#bf616a"
+# weak = "#d08770"
+# [appearance.background_color]
+# base = "#2e3440"
+# weak = "#3b4252"
+# strong = "#2e3440"
+
+# ============================================================================
+# 🚀 QUICK START TIPS
+# ============================================================================
+# 1. Make sure you have the required dependencies installed
+# 2. Adjust the app_launcher_cmd to your preferred launcher
+# 3. Update the check_cmd in [updates] for your distro
+# 4. Customize the color scheme to match your setup
+# 5. Add custom modules for frequently used apps
+# 6. The config auto-reloads when you save changes!
+# ============================================================================

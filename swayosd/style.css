@@ -1,0 +1,60 @@
+/* Nord Theme for SwayOSD - Smaller Size */
+
+window {
+  background: rgba(46, 52, 64, 0.95); /* #2e3440 Nord Polar Night */
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid #88c0d0; /* Nord Frost */
+}
+
+#container {
+  margin: 6px;
+}
+
+/* Progress bar container */
+progressbar,
+trough {
+  min-height: 10px;
+  border-radius: 5px;
+  background: rgba(59, 66, 82, 0.8); /* #3b4252 Nord darker */
+}
+
+/* Progress bar fill */
+progress {
+  background: linear-gradient(90deg, #88c0d0 0%, #8fbcbb 100%); /* Nord Frost gradient */
+  border-radius: 5px;
+  min-height: 10px;
+}
+
+/* Volume/brightness icons */
+image {
+  margin: 6px;
+  padding: 3px;
+  color: #d8dee9; /* Nord Snow Storm */
+  -gtk-icon-size: 32px;
+}
+
+/* Labels */
+label {
+  color: #d8dee9; /* Nord Snow Storm */
+  font-family: "CaskaydiaMono Nerd Font";
+  font-size: 11px;
+  font-weight: 500;
+  margin: 3px;
+}
+
+/* Capslock indicator */
+label#current-key {
+  color: #8fbcbb; /* Nord Frost cyan */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Muted state */
+.muted {
+  color: #bf616a; /* Nord Aurora red */
+}
+
+.muted progress {
+  background: linear-gradient(90deg, #bf616a 0%, #d08770 100%); /* Nord Aurora red gradient */
+}

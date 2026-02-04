@@ -18,6 +18,8 @@
     ~/.config/code-flags.conf: ./root_singles/code-flags.conf
     ~/.config/hypr: ./hypr
     ~/.config/rofi: ./rofi
+    ~/.config/mako: ./mako
+    ~/.config/swayosd: ./swayosd
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

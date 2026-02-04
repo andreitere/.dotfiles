@@ -1,0 +1,33 @@
+# Nord Theme
+max-visible=10
+layer=overlay
+font=CaskaydiaMono Nerd Font 10
+background-color=#2e3440ee
+text-color=#d8dee9
+border-color=#88c0d0
+border-size=2
+border-radius=8
+max-icon-size=48
+default-timeout=8000
+anchor=top-right
+margin=20
+padding=12
+width=350
+
+# Grouped notifications
+group-by=app-name
+max-history=50
+
+# Urgency levels
+[urgency=low]
+border-color=#a3be8c
+background-color=#2e3440ee
+
+[urgency=normal]
+border-color=#88c0d0
+background-color=#2e3440ee
+
+[urgency=critical]
+border-color=#bf616a
+background-color=#bf616add
+default-timeout=0
