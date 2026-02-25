@@ -120,23 +120,26 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {
-        "bash",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-      },
+      -- ensure_installed = {
+      --   "bash",
+      --   "html",
+      --   "javascript",
+      --   "json",
+      --   "lua",
+      --   "markdown",
+      --   "markdown_inline",
+      --   "python",
+      --   "query",
+      --   "regex",
+      --   "tsx",
+      --   "typescript",
+      --   "vim",
+      --   "yaml",
+      -- },
     },
+    -- branch = 'master',
+    lazy = false,
+    build = ':TSUpdate'
   },
 
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above

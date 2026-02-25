@@ -20,12 +20,14 @@ customCommands:
       bash -c 'git diff HEAD --cached > "{{.Form.file}}.patch" && echo "✅ Patch saved as {{.Form.file}}.patch"'
 gui:
   nerdFontsVersion: "3"
+  useHunkModeInStagingView: true
   theme:
     activeBorderColor:
-      - "#fab387"
+      - "#f58e4e"
       - bold
     inactiveBorderColor:
       - "#a6adc8"
+      - bold
     optionsTextColor:
       - "#89b4fa"
     selectedLineBgColor:
@@ -44,4 +46,4 @@ gui:
   authorColors:
     "*": "#b4befe"
   # theme:
-  # border: 'double'
+  # border: 'bold'

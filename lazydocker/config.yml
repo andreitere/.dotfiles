@@ -2,5 +2,8 @@ customCommands:
   containers:
     - name: kill
       attach: false
-      command: 'docker kill {{ .Container.ID }}'
+      command: "docker kill {{ .Container.ID }}"
       serviceNames: []
+gui:
+  returnImmediately: true
+
