@@ -8,7 +8,11 @@ customCommands:
         title: "Commit message:"
         key: "commit_msg"
         initialValue: "wip"
-
+  - key: "<c-g>"
+    context: "commitMessage"
+    description: "Generate AI commit message (copy to clipboard)"
+    command: "~/.local/bin/ai-commit"
+    output: "log"
   - key: "<c-d>"
     context: "files"
     description: "Generate git patch from changes"
