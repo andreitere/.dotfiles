@@ -9,11 +9,10 @@ cursor-opacity=0.8
 cursor-style=underline
 cursor-style-blink=true
 window-step-resize=true
-window-padding-y=5
+window-padding-y=0
 window-padding-x=5
-font-family=GeistMono
 window-decoration=server
-
+font-family=JetBrains Mono
 
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
