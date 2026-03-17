@@ -1,4 +1,6 @@
-theme=Rose Pine
+#theme=Rose Pine
+theme=TokyoNight Night
+
 font-size=16
 custom-shader-animation=true
 clipboard-write=allow
@@ -12,6 +14,6 @@ cursor-style-blink=true
 window-step-resize=true
 window-padding-y=0
 window-padding-x=0
-font-family="Geis Mono"
+font-family="JetBrains Mono"
 custom-shader = shaders/cursor_warp.glsl
 auto-update-channel = tip
