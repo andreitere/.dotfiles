@@ -1,10 +1,10 @@
-/* Nord Theme for SwayOSD - Smaller Size */
+/* Soho Dusk Theme for SwayOSD */
 
 window {
-  background: rgba(46, 52, 64, 0.95); /* #2e3440 Nord Polar Night */
+  background: rgba(26, 23, 33, 0.95); /* #1a1721 */
   border-radius: 8px;
   padding: 12px;
-  border: 2px solid #88c0d0; /* Nord Frost */
+  border: 2px solid #e89bc1; /* accent pink */
 }
 
 #container {
@@ -16,12 +16,12 @@ progressbar,
 trough {
   min-height: 10px;
   border-radius: 5px;
-  background: rgba(59, 66, 82, 0.8); /* #3b4252 Nord darker */
+  background: rgba(48, 42, 58, 0.8); /* #302a3a lighter bg */
 }
 
 /* Progress bar fill */
 progress {
-  background: linear-gradient(90deg, #88c0d0 0%, #8fbcbb 100%); /* Nord Frost gradient */
+  background: linear-gradient(90deg, #c48ad5 0%, #e89bc1 100%); /* purple to pink */
   border-radius: 5px;
   min-height: 10px;
 }
@@ -30,13 +30,13 @@ progress {
 image {
   margin: 6px;
   padding: 3px;
-  color: #d8dee9; /* Nord Snow Storm */
+  color: #d0cbd8; /* foreground */
   -gtk-icon-size: 32px;
 }
 
 /* Labels */
 label {
-  color: #d8dee9; /* Nord Snow Storm */
+  color: #d0cbd8; /* foreground */
   font-family: "CaskaydiaMono Nerd Font";
   font-size: 11px;
   font-weight: 500;
@@ -45,16 +45,16 @@ label {
 
 /* Capslock indicator */
 label#current-key {
-  color: #8fbcbb; /* Nord Frost cyan */
+  color: #57bfb5; /* cyan */
   font-size: 18px;
   font-weight: bold;
 }
 
 /* Muted state */
 .muted {
-  color: #bf616a; /* Nord Aurora red */
+  color: #e87b97; /* red */
 }
 
 .muted progress {
-  background: linear-gradient(90deg, #bf616a 0%, #d08770 100%); /* Nord Aurora red gradient */
+  background: linear-gradient(90deg, #e87b97 0%, #d4956e 100%); /* red to orange */
 }

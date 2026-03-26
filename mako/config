@@ -1,10 +1,10 @@
-# Nord Theme
+# Soho Dusk Theme
 max-visible=10
 layer=overlay
 font=CaskaydiaMono Nerd Font 10
-background-color=#2e3440ee
-text-color=#d8dee9
-border-color=#88c0d0
+background-color=#1a1721ee
+text-color=#d0cbd8
+border-color=#e89bc1
 border-size=2
 border-radius=8
 max-icon-size=48
@@ -20,14 +20,14 @@ max-history=50
 
 # Urgency levels
 [urgency=low]
-border-color=#a3be8c
-background-color=#2e3440ee
+border-color=#7cc9a0
+background-color=#1a1721ee
 
 [urgency=normal]
-border-color=#88c0d0
-background-color=#2e3440ee
+border-color=#e89bc1
+background-color=#1a1721ee
 
 [urgency=critical]
-border-color=#bf616a
-background-color=#bf616add
+border-color=#e87b97
+background-color=#e87b97dd
 default-timeout=0

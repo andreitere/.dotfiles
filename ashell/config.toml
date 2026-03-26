@@ -162,23 +162,23 @@ font_size = 13
 scale_factor = 1.1
 
 # ============================================================================
-# COLOR SCHEME - Tokyo Night
+# COLOR SCHEME - Soho Dusk
 # ============================================================================
 
-# Primary accent color (tokyo blue)
-primary_color = "#7aa2f7"
+# Primary accent color (pink)
+primary_color = "#e89bc1"
 
 # Success/positive actions (green)
-success_color = "#9ece6a"
+success_color = "#7cc9a0"
 
 # Main text color
-text_color = "#a9b1d6"
+text_color = "#d0cbd8"
 
-# Workspace colors (blue to purple gradient)
-workspace_colors = ["#7aa2f7", "#bb9af7"]
+# Workspace colors (purple to pink gradient)
+workspace_colors = ["#c48ad5", "#e89bc1"]
 
 # Special workspace colors
-special_workspace_colors = ["#bb9af7", "#7aa2f7"]
+special_workspace_colors = ["#e89bc1", "#c48ad5"]
 
 # ============================================================================
 # DANGER/WARNING COLORS
@@ -186,9 +186,9 @@ special_workspace_colors = ["#bb9af7", "#7aa2f7"]
 
 [appearance.danger_color]
 # Critical/error state (red)
-base = "#f7768e"
+base = "#e87b97"
 # Warning state (yellow)
-weak = "#e0af68"
+weak = "#d9b464"
 
 # ============================================================================
 # BACKGROUND COLORS
@@ -196,11 +196,11 @@ weak = "#e0af68"
 
 [appearance.background_color]
 # Main background (dark)
-base = "#1a1b26"
+base = "#1a1721"
 # Lighter background (for contrast)
-weak = "#24283b"
+weak = "#302a3a"
 # Stronger/darker background
-strong = "#414868"
+strong = "#4d465a"
 
 # ============================================================================
 # SECONDARY COLORS
@@ -208,7 +208,7 @@ strong = "#414868"
 
 [appearance.secondary_color]
 # Secondary UI elements
-base = "#565f89"
+base = "#928da0"
 
 # ============================================================================
 # 🎯 CUSTOM MODULES (OPTIONAL)
@@ -256,6 +256,19 @@ base = "#565f89"
 # base = "#1a1b26"
 # weak = "#24283b"
 # strong = "#414868"
+
+# ---- SOHO DUSK (active) ----
+# primary_color = "#e89bc1"
+# success_color = "#7cc9a0"
+# text_color = "#d0cbd8"
+# workspace_colors = ["#c48ad5", "#e89bc1"]
+# [appearance.danger_color]
+# base = "#e87b97"
+# weak = "#d9b464"
+# [appearance.background_color]
+# base = "#1a1721"
+# weak = "#302a3a"
+# strong = "#4d465a"
 
 # ---- CATPPUCCIN MOCHA ----
 # primary_color = "#89b4fa"

@@ -1,10 +1,30 @@
-theme=TokyoNight Night
-#theme=Black Metal (Bathory)
+# Soho Dusk Theme
+background=#1a1721
+foreground=#d0cbd8
+cursor-color=#e0dbea
+selection-background=#4d3a5a
+selection-foreground=#e0dbea
+palette=0=#302a3a
+palette=1=#e87b97
+palette=2=#7cc9a0
+palette=3=#d9b464
+palette=4=#7ba5dd
+palette=5=#c48ad5
+palette=6=#57bfb5
+palette=7=#928da0
+palette=8=#4d465a
+palette=9=#f09aae
+palette=10=#96e0b8
+palette=11=#edc97a
+palette=12=#96bef0
+palette=13=#d8a0e8
+palette=14=#6dd8ce
+palette=15=#bdb8cb
+
 font-size=12
 custom-shader-animation=true
 clipboard-write=allow
 selection-invert-fg-bg=true
-cursor-color=#FBFBFB
 cursor-opacity=0.8
 cursor-style=underline
 cursor-style-blink=true
@@ -12,7 +32,7 @@ window-step-resize=true
 window-padding-y=0
 window-padding-x=5
 window-decoration=server
-font-family=JetBrains Mono
+font-family="JetBrainsMono Nerd Font"
 
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
