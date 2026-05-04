@@ -9,7 +9,7 @@ return {
         },
         grep = {
           hidden = true,
-          ignored = true,
+          ignored = false,
         },
         explorer = {
           hidden = true,
