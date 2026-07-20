@@ -1,6 +1,6 @@
 # Soho Dusk Theme
 background=#1a1721
-foreground=#d0cbd8
+# foreground=#d0cbd8
 cursor-color=#e0dbea
 selection-background=#4d3a5a
 selection-foreground=#e0dbea

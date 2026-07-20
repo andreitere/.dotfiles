@@ -1,0 +1,85 @@
+[2026-05-19 20:32:27.490]: Info: Sunshine version: 2025.924.154138 commit: 86188d47a7463b0f73b35de18a628353adeaa20e
+[2026-05-19 20:32:27.490]: Info: Package Publisher: LizardByte
+[2026-05-19 20:32:27.490]: Info: Publisher Website: https://app.lizardbyte.dev
+[2026-05-19 20:32:27.490]: Info: Get support: https://app.lizardbyte.dev/support
+[2026-05-19 20:32:27.490]: Info: config: 'capture' = kms
+[2026-05-19 20:32:27.491]: Info: config: 'output_name' = 1
+[2026-05-19 20:32:27.491]: Info: config: 'encoder' = nvenc
+[2026-05-19 20:32:27.491]: Info: config: 'nvenc_preset' = 7
+[2026-05-19 20:32:27.491]: Info: config: 'sw_preset' = fast
+[2026-05-19 20:32:27.491]: Info: config: 'origin_web_ui_allowed' = lan
+[2026-05-19 20:32:27.491]: Info: /dev/dri/card0 -> amdgpu
+[2026-05-19 20:32:27.493]: Info: /dev/dri/card1 -> nvidia-drm
+[2026-05-19 20:32:27.493]: Info: Found display [wayland-1]
+[2026-05-19 20:32:27.493]: Info: Found display [wayland-1]
+[2026-05-19 20:32:27.493]: Info: Found interface: zxdg_output_manager_v1(9) version 3
+[2026-05-19 20:32:27.493]: Info: Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-05-19 20:32:27.493]: Info: Found interface: zwp_linux_dmabuf_v1(68) version 5
+[2026-05-19 20:32:27.493]: Info: Found interface: wl_output(69) version 4
+[2026-05-19 20:32:27.493]: Info: Found interface: wl_output(70) version 4
+[2026-05-19 20:32:27.493]: Info: Resolution: 3840x2160
+[2026-05-19 20:32:27.493]: Info: Resolution: 1920x1080
+[2026-05-19 20:32:27.493]: Info: Name: HDMI-A-1
+[2026-05-19 20:32:27.493]: Info: Found monitor: LG Electronics LG HDR 4K 305MAEGC4292 (HDMI-A-1)
+[2026-05-19 20:32:27.493]: Info: Offset: 0x0
+[2026-05-19 20:32:27.493]: Info: Logical size: 3200x1800
+[2026-05-19 20:32:27.493]: Info: Name: DP-1
+[2026-05-19 20:32:27.493]: Info: Found monitor: Telecom Technology Centre Co. Ltd. DP1080P60  (DP-1)
+[2026-05-19 20:32:27.493]: Info: Offset: 3200x0
+[2026-05-19 20:32:27.493]: Info: Logical size: 1920x1080
+[2026-05-19 20:32:27.493]: Info: -------- Start of KMS monitor list --------
+[2026-05-19 20:32:27.493]: Warning: Mismatch on expected Resolution compared to actual resolution: 0x0 vs 3840x2160
+[2026-05-19 20:32:27.493]: Info: Monitor 0 is HDMI-A-1: LG Electronics LG HDR 4K 305MAEGC4292 (HDMI-A-1)
+[2026-05-19 20:32:27.493]: Info: Monitor 1 is DP-1: Telecom Technology Centre Co. Ltd. DP1080P60  (DP-1)
+[2026-05-19 20:32:27.493]: Info: --------- End of KMS monitor list ---------
+[2026-05-19 20:32:27.598]: Info: Trying encoder [nvenc]
+[2026-05-19 20:32:27.598]: Info: Screencasting with KMS
+[2026-05-19 20:32:27.598]: Info: /dev/dri/card0 -> amdgpu
+[2026-05-19 20:32:27.599]: Info: /dev/dri/card1 -> nvidia-drm
+[2026-05-19 20:32:27.599]: Info: Found monitor for DRM screencasting
+[2026-05-19 20:32:27.599]: Info: Found connector ID [132]
+[2026-05-19 20:32:27.599]: Info: Found cursor plane [76]
+[2026-05-19 20:32:27.599]: Info: Creating encoder [h264_nvenc]
+[2026-05-19 20:32:27.599]: Info: Color coding: SDR (Rec. 601)
+[2026-05-19 20:32:27.599]: Info: Color depth: 8-bit
+[2026-05-19 20:32:27.599]: Info: Color range: JPEG
+[2026-05-19 20:32:27.772]: Info: Streaming bitrate is 1000000
+[2026-05-19 20:32:28.035]: Info: Creating encoder [hevc_nvenc]
+[2026-05-19 20:32:28.035]: Info: Color coding: SDR (Rec. 601)
+[2026-05-19 20:32:28.035]: Info: Color depth: 8-bit
+[2026-05-19 20:32:28.035]: Info: Color range: JPEG
+[2026-05-19 20:32:28.037]: Info: Streaming bitrate is 1000000
+[2026-05-19 20:32:28.298]: Info: Creating encoder [av1_nvenc]
+[2026-05-19 20:32:28.298]: Info: Color coding: SDR (Rec. 601)
+[2026-05-19 20:32:28.298]: Info: Color depth: 8-bit
+[2026-05-19 20:32:28.298]: Info: Color range: JPEG
+[2026-05-19 20:32:28.300]: Info: Streaming bitrate is 1000000
+[2026-05-19 20:32:28.560]: Info: Screencasting with KMS
+[2026-05-19 20:32:28.560]: Info: /dev/dri/card0 -> amdgpu
+[2026-05-19 20:32:28.562]: Info: /dev/dri/card1 -> nvidia-drm
+[2026-05-19 20:32:28.562]: Info: Found monitor for DRM screencasting
+[2026-05-19 20:32:28.562]: Info: Found connector ID [132]
+[2026-05-19 20:32:28.562]: Info: Found cursor plane [76]
+[2026-05-19 20:32:28.562]: Info: Creating encoder [hevc_nvenc]
+[2026-05-19 20:32:28.562]: Info: Color coding: SDR (Rec. 709)
+[2026-05-19 20:32:28.562]: Info: Color depth: 10-bit
+[2026-05-19 20:32:28.562]: Info: Color range: JPEG
+[2026-05-19 20:32:28.564]: Info: Streaming bitrate is 1000000
+[2026-05-19 20:32:28.828]: Info: Creating encoder [av1_nvenc]
+[2026-05-19 20:32:28.828]: Info: Color coding: SDR (Rec. 709)
+[2026-05-19 20:32:28.828]: Info: Color depth: 10-bit
+[2026-05-19 20:32:28.828]: Info: Color range: JPEG
+[2026-05-19 20:32:28.830]: Info: Streaming bitrate is 1000000
+[2026-05-19 20:32:29.092]: Info: // Testing for available encoders, this may generate errors. You can safely ignore those errors. //
+[2026-05-19 20:32:29.092]: Info: 
+[2026-05-19 20:32:29.092]: Info: // Ignore any errors mentioned above, they are not relevant. //
+[2026-05-19 20:32:29.092]: Info: 
+[2026-05-19 20:32:29.092]: Info: Found H.264 encoder: h264_nvenc [nvenc]
+[2026-05-19 20:32:29.092]: Info: Found HEVC encoder: hevc_nvenc [nvenc]
+[2026-05-19 20:32:29.092]: Info: Found AV1 encoder: av1_nvenc [nvenc]
+[2026-05-19 20:32:29.092]: Info: Starting system tray
+[2026-05-19 20:32:29.093]: Info: Adding avahi service jarvis
+[2026-05-19 20:32:29.094]: Info: Configuration UI available at [https://localhost:47990]
+[2026-05-19 20:32:29.119]: Info: System tray created
+[2026-05-19 20:32:29.119]: Info: Starting main loop
+[2026-05-19 20:32:29.864]: Info: Avahi service jarvis successfully established.
