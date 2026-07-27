@@ -1,0 +1,60 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+
+auto_switch = false
+
+[ui.toast]
+delivery = "terminal"
+
+[ui.toast.herdr]
+position = "top-right"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+sidebar.spaces.row_gap = 0
+# Don't prompt for a tab name (prefix+c is a custom command below that names tabs by cwd)
+prompt_new_tab_name = false
+# ============================================
+
+agent_panel_sort = "priority"
+
+[terminal]
+# Panes/tabs keep inheriting the current pane's cwd (this IS the default,
+# pinned explicitly so only workspaces below start at ~)
+new_cwd = "follow"
+
+[keys]
+previous_tab = "prefix+comma"
+next_tab = "prefix+."
+
+split_horizontal = "prefix+_"
+split_vertical = "prefix+|"
+
+focus_pane_left  = ["prefix+h", "prefix+left"]
+focus_pane_down  = ["prefix+j", "prefix+down"]
+focus_pane_up    = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
+
+# Built-in new_workspace (prefix+shift+n) follows cwd; unset it and replace
+# with a custom command on prefix+n so new workspaces always start at ~
+# and their first tab is named "main" (workspace create returns the tab id)
+new_workspace = ""
+
+# Same trick for tabs: built-in new_tab doesn't name from cwd, so replace
+# prefix+c with a command that labels the tab after the pane's cwd basename
+new_tab = ""
+
+[[keys.command]]
+key = "prefix+n"
+type = "shell"
+command = '''
+herdr tab rename "$(herdr workspace create --cwd "$HOME" --focus | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["tab"]["tab_id"])')" main'''
+description = "new workspace at ~ (first tab: main)"
+
+[[keys.command]]
+key = "prefix+c"
+type = "shell"
+command = 'herdr tab create --label "$(basename "$HERDR_ACTIVE_PANE_CWD")" --focus'
+description = "new tab named by cwd"

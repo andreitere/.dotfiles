@@ -13,7 +13,9 @@
     ~/.config/atuin: ./atuin
     ~/.config/lazygit: ./lazygit
     ~/.config/lazydocker: ./lazydocker
+    ~/.config/herdr: ./herdr
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing tmux plugin manager]
+  - [brew install herdr, Installing herdr]

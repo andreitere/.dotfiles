@@ -17,5 +17,4 @@ window-padding-y=1
 window-padding-x=10,10
 window-padding-color=extend
 font-family="JetBrains Mono Nerd Font"
-custom-shader = shaders/cursor_warp.glsl
 auto-update-channel = tip
