@@ -46,11 +46,12 @@ new_workspace = ""
 # prefix+c with a command that labels the tab after the pane's cwd basename
 new_tab = ""
 
+
+
 [[keys.command]]
 key = "prefix+n"
 type = "shell"
-command = '''
-herdr tab rename "$(herdr workspace create --cwd "$HOME" --focus | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["tab"]["tab_id"])')" main'''
+command = '''herdr tab rename "$(herdr workspace create --cwd "$HOME" --focus | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["tab"]["tab_id"])')" main'''
 description = "new workspace at ~ (first tab: main)"
 
 [[keys.command]]
