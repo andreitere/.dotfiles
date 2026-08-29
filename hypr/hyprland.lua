@@ -1,5 +1,8 @@
 -- Hyprland 0.55+ configuration.
 -- See https://wiki.hypr.land/Configuring/Start/
+-- Layout switch: "dwindle" or "scrolling". All layout-specific options and
+-- keybinds below are selected from this variable.
+local LAYOUT = "scrolling"
 local file_manager = "uwsm app -- nautilus ~/Downloads"
 local lock_cmd = "qs -c noctalia-shell ipc call lockScreen lock"
 local noctalia_ipc = "qs -c noctalia-shell ipc call"
@@ -42,8 +45,7 @@ hl.config({
         ["col.inactive_border"] = "rgba(595959aa)",
         resize_on_border = true,
         allow_tearing = false,
-        layout = "dwindle"
-        -- layout = "scrolling"
+        layout = LAYOUT
     },
     decoration = {
         rounding = 2,
@@ -61,6 +63,20 @@ hl.config({
             passes = 2,
             vibrancy = 0.1696
         }
+    },
+    -- Layout-specific options. Hyprland only reads the section matching
+    -- general.layout, so it's fine to keep them all here.
+    -- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/
+    scrolling = {
+        fullscreen_on_one_column = true, -- single column spans the whole screen
+        column_width = 0.4, -- default width of a new column [0.1 - 1.0]
+        focus_fit_method = 1, -- 0 = center column on focus, 1 = fit into view
+        follow_focus = true, -- scroll the layout when focus moves
+        follow_min_visible = 0.4, -- fraction of a window that must be visible for focus to follow
+        explicit_column_widths = "0.333, 0.5, 0.667, 1.0", -- widths cycled by colresize +conf/-conf
+        wrap_focus = true, -- focus l/r wraps around at the ends
+        wrap_swapcol = true, -- swapcol l/r wraps around at the ends
+        direction = "right" -- where new windows appear: left/right/down/up
     },
     dwindle = {
         preserve_split = true
@@ -161,7 +177,19 @@ bind("SUPER + SPACE", exec(noctalia_ipc .. " launcher toggle"))
 bind("SUPER + P", hl.dsp.window.pseudo({
     action = "toggle"
 }))
-bind("SUPER + J", hl.dsp.layout("togglesplit"))
+-- Layout-specific binds
+if LAYOUT == "scrolling" then
+    bind("SUPER + J", hl.dsp.layout("move +col")) -- scroll layout right one column
+    bind("SUPER + K", hl.dsp.layout("move -col")) -- scroll layout left one column
+    bind("SUPER + COMMA", hl.dsp.layout("colresize -0.2")) -- shrink active column
+    bind("SUPER + PERIOD", hl.dsp.layout("colresize +0.2")) -- widen active column
+    bind("SUPER + SHIFT + J", hl.dsp.layout("promote")) -- move window to its own column
+    bind("SUPER + SHIFT + K", hl.dsp.layout("fit active")) -- center/fit active column into view
+    bind("SUPER + ALT + J", hl.dsp.layout("consume_or_expel prev")) -- merge into previous column / expel
+    bind("SUPER + ALT + K", hl.dsp.layout("swapcol r")) -- swap column with the next one
+else
+    bind("SUPER + J", hl.dsp.layout("togglesplit")) -- dwindle-only
+end
 bind("ALT + SHIFT + SUPER + B", exec(noctalia_ipc .. " launcher emoji"))
 bind("ALT + SHIFT + C", exec(noctalia_ipc .. " launcher clipboard"))
 bind("SUPER + ALT + SHIFT + W", exec(
@@ -223,10 +251,25 @@ bind("SUPER + TAB", hl.dsp.workspace.toggle_special("magic"))
 bind("SUPER + SHIFT + TAB", hl.dsp.window.move({
     workspace = "special:magic"
 }))
-bind("SUPER + mouse_down", hl.dsp.focus({
+-- Wheel binds are consuming by default: the scroll event is handled by
+-- Hyprland and NOT forwarded to the focused window.
+-- SUPER + wheel: scroll columns (scrolling) / switch workspaces (dwindle).
+if LAYOUT == "scrolling" then
+    bind("SUPER + mouse_down", hl.dsp.layout("move +col"))
+    bind("SUPER + mouse_up", hl.dsp.layout("move -col"))
+else
+    bind("SUPER + mouse_down", hl.dsp.focus({
+        workspace = "e+1"
+    }))
+    bind("SUPER + mouse_up", hl.dsp.focus({
+        workspace = "e-1"
+    }))
+end
+-- SUPER + ALT + wheel always switches workspaces, regardless of layout.
+bind("SUPER + ALT + mouse_down", hl.dsp.focus({
     workspace = "e+1"
 }))
-bind("SUPER + mouse_up", hl.dsp.focus({
+bind("SUPER + ALT + mouse_up", hl.dsp.focus({
     workspace = "e-1"
 }))
 bind("SUPER + mouse:272", hl.dsp.window.drag(), {
