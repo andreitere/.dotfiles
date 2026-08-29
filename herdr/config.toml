@@ -1,9 +1,13 @@
 onboarding = false
 
 [theme]
-name = "terminal"
-
+name = "gruvbox"
 auto_switch = false
+
+[theme.custom]
+# active_row_bg = "#8686a0"
+selection_bg = "#313244"
+
 
 [ui.toast]
 delivery = "terminal"

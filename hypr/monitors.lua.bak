@@ -4,6 +4,7 @@ hl.monitor({
   output = "desc:LG Electronics LG HDR 4K 305MAEGC4292",
   mode = "3840x2160@59.997",
   position = "0x0",
-  scale = 1.25,
+  scale = 1.2,
+  bitdepth = 10,
   cm = "srgb",
 })

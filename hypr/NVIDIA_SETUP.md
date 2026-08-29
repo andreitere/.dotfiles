@@ -42,12 +42,12 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optim
 ```
 
 **Method 3: Per-application window rules in Hyprland**
-Add to `hyprland.conf` to automatically run specific apps on NVIDIA:
-```conf
-env = STEAM_FORCE_DESKTOPUI_SCALING,1.5
-windowrulev2 = env __NV_PRIME_RENDER_OFFLOAD 1,class:^(steam)$
-windowrulev2 = env __GLX_VENDOR_LIBRARY_NAME nvidia,class:^(steam)$
-windowrulev2 = env __VK_LAYER_NV_optimus NVIDIA_only,class:^(steam)$
+Add to `hyprland.lua` to automatically run specific apps on NVIDIA:
+```lua
+hl.env("STEAM_FORCE_DESKTOPUI_SCALING", "1.5")
+hl.window_rule({ match = { class = "^(steam)$" }, env = "__NV_PRIME_RENDER_OFFLOAD 1" })
+hl.window_rule({ match = { class = "^(steam)$" }, env = "__GLX_VENDOR_LIBRARY_NAME nvidia" })
+hl.window_rule({ match = { class = "^(steam)$" }, env = "__VK_LAYER_NV_optimus NVIDIA_only" })
 ```
 
 ### 4. Rendering Settings
