@@ -51,6 +51,7 @@ bind("SUPER + ALT + SHIFT + W", exec(
     'xfreerdp3 /u:"tere" /p:"isg2025" /v:127.0.0.1:3389 -grab-keyboard /sound /microphone /cert:ignore /title:"Windows VM" /dynamic-resolution /gfx:AVC444 /floatbar:sticky:off,default:visible,show:fullscreen'))
 bind("SUPER + slash", exec("uwsm app -- proton-pass"))
 bind("F8", exec("hyprshot -m region --clipboard-only"))
+bind("code:99", exec("hyprshot -m region --clipboard-only"))
 
 for _, direction in ipairs({"left", "right", "up", "down"}) do
     bind("ALT + TAB + " .. direction, hl.dsp.focus({

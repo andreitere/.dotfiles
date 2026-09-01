@@ -1,28 +1,25 @@
 # Functions needed in all zsh sessions (interactive, non-interactive, SSH)
-monitor_on() {
-  local dir=/run/user/$(id -u)/hypr
+# Run a hyprctl command against the first live (reachable) Hyprland instance.
+_hyprctl_live() {
+  local dir=/run/user/$(id -u)/hypr sig
   [[ -d $dir ]] || { echo "Hyprland not running"; return 1; }
-  local sig
-  for sig in "$dir"/*/; do
-    sig=${sig%/}
-    sig=${sig##*/}
-    HYPRLAND_INSTANCE_SIGNATURE=$sig hyprctl dispatch 'hl.dsp.dpms({ action = "enable" })'
-    return
+  for sig in "$dir"/*(N); do
+    sig=${sig:t}
+    if HYPRLAND_INSTANCE_SIGNATURE=$sig hyprctl rollinglogger_status &>/dev/null; then
+      HYPRLAND_INSTANCE_SIGNATURE=$sig hyprctl "$@"
+      return
+    fi
   done
-  echo "No Hyprland instance found"
+  echo "No live Hyprland instance found"
+  return 1
+}
+
+monitor_on() {
+  _hyprctl_live dispatch 'hl.dsp.dpms({ action = "enable" })'
 }
 
 monitor_off() {
-  local dir=/run/user/$(id -u)/hypr
-  [[ -d $dir ]] || { echo "Hyprland not running"; return 1; }
-  local sig
-  for sig in "$dir"/*/; do
-    sig=${sig%/}
-    sig=${sig##*/}
-    HYPRLAND_INSTANCE_SIGNATURE=$sig hyprctl dispatch 'hl.dsp.dpms({ action = "disable" })'
-    return
-  done
-  echo "No Hyprland instance found"
+  _hyprctl_live dispatch 'hl.dsp.dpms({ action = "disable" })'
 }
 
 poweroff() {

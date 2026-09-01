@@ -19,7 +19,7 @@ hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("GDK_BACKEND", "wayland,x11")
-hl.env("GDK_SCALE", "2")
+hl.env("GDK_SCALE", 2)
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("SDL_VIDEODRIVER", "wayland")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
@@ -40,13 +40,15 @@ hl.config({
         },
         ["col.inactive_border"] = "rgba(595959aa)",
         resize_on_border = true,
+
         allow_tearing = false,
         layout = LAYOUT
     },
     decoration = {
         rounding = 2,
         rounding_power = 2,
-        dim_inactive = false,
+        dim_inactive = true,
+        dim_strength = 0.3,
         shadow = {
             enabled = true,
             range = 4,
@@ -89,10 +91,13 @@ hl.config({
     },
     input = {
         kb_layout = "us",
-        kb_variant = "mac",
+        -- kb_variant = "intl",
         follow_mouse = 1,
         sensitivity = -1,
-        kb_options = "ctrl:nocaps,#altwin:swap_alt_win",
+        -- F1-F12 vs media-key behavior is NOT an xkb option. This keyboard spoofs an
+        -- Apple Aluminium keyboard (05ac:024f), so the kernel hid_apple driver handles it.
+        -- See /etc/modprobe.d/hid_apple.conf (fnmode=2 -> F-keys primary, Fn+Fx = media).
+        kb_options = "ctrl:nocaps,altwin:swap_alt_win",
         accel_profile = "adaptive"
     },
     xwayland = {
