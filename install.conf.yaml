@@ -22,6 +22,7 @@
     ~/.config/rofi: ./rofi
     ~/.config/mako: ./mako
     ~/.config/swayosd: ./swayosd
+    ~/.config/noctalia: ./noctalia
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
